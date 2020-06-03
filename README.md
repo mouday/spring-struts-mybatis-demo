@@ -1,0 +1,1 @@
+通过xml配置的形式进行Spring + Struts2 + MyBatis整合
