@@ -3,11 +3,18 @@ package com.pengshiyu.action;
 import com.opensymphony.xwork2.ActionSupport;
 import com.pengshiyu.bean.User;
 import com.pengshiyu.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
+@Controller("userAction")
+@Scope("prototype")
 public class UserAction extends ActionSupport {
     private List<User> users;
+
+    @Autowired
     private UserService userService;
 
     public String list(){
